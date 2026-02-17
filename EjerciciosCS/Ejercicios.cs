@@ -23,7 +23,23 @@ namespace EjerciciosCS
         public double CalcularPromedioTemperatura()
         {
             // TODO: Implementar el cálculo del promedio de temperaturas
-            double promedio = 0.0; 
+            double [] temp = new double[5];
+            temp [0] = 20;
+            temp [1] = 22;
+            temp [2] = 24;
+            temp [3] = 26;
+            temp [4] = 30;
+        
+            
+            
+            double add = 0;
+
+            for ( int i = 0; i < temp.Length; i++)
+            {
+                add += temp[i];
+            }   
+              
+             double promedio = add / 5; 
             
             
             return promedio;
@@ -45,10 +61,51 @@ namespace EjerciciosCS
         {
             // TODO: Implementar la lista de compras interactiva
             List<string> listaCompras = new List<string>();
+
+            
+        
+          
+           Console.ReadLine();
+
+            
+             Console.WriteLine("=== LISTA DE SUPERMERCADO ===");
+
+        
+        while (true)
+        {
+            Console.WriteLine("Ingresa un producto (escribe 'salir' para terminar):");
+            
+            
+            string input = Console.ReadLine();
+
+            
+            if (input.ToLower() == "salir")
+            {
+                break;
+            }
+
+            
+            listaCompras.Add(input);
+        }
+
+        
+        Console.WriteLine("\n=== PRODUCTOS EN LA LISTA ===");
+
+        foreach (string input in listaCompras)
+        {
+            Console.WriteLine("- " + listaCompras);
+        }
+
+        Console.WriteLine("\nGracias por usar la lista de supermercado.");
+    
+    return listaCompras;
+    
+    }
+
             
 
-            return listaCompras;
-        }
+        
+        
 
         /// <summary>
         /// 3. EL BUSCADOR (Reto)
